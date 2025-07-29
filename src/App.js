@@ -13,7 +13,7 @@ function App() {
           <Nav />
           <Routes>
             <Route path="/" exact element={<Home />} />
-            <Route path="/books" render={() => <Books books={books}/>} />
+            <Route path="/books" element={<Books books={books}/>} />
           </Routes>
           <Footer />
         </div>
