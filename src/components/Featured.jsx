@@ -3,7 +3,7 @@ import { books } from "../data";
 import Book from "./ui/book";
 
 const Featured = () => {
-  console.log(books.filter((book) => book.rating === 5).slice(0, 4));
+  // console.log(books.filter((book) => book.rating === 5).slice(0, 4));
 
   return (
     <section id="features">

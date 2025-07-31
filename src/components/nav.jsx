@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LibraryLogo from "../assets/Library.svg";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
 
@@ -15,28 +16,28 @@ const Nav = () => {
   return (
     <nav>
       <div className="nav__container">
-        <a href="/">
+        <Link to="/">
           <img src={LibraryLogo} alt="" className="logo" />
-        </a>
+        </Link>
         <ul className="nav_links">
           <li className="nav__list">
-            <a href="/" className="nav__link">
+            <Link to="/" className="nav__link">
               Home
-            </a>
+            </Link>
           </li>
           <li className="nav__list">
-            <a href="/books" className="nav__link">
+            <Link to="/books" className="nav__link">
               Books
-            </a>
+            </Link>
           </li>
           <button className="btn__menu" onClick={openMenu}>
             <FontAwesomeIcon icon="fa-bars" />
           </button>
           <li className="nav__icon">
-            <a href="/cart" className="nav__link">
+            <Link to="/cart" className="nav__link">
               <FontAwesomeIcon icon="fa-cart-shopping" />
-            </a>
-            <span className="cart__length">3</span>
+            </Link>
+            <span className="cart__length"></span>
           </li>
         </ul>
         <div className="menu__backdrop">
@@ -45,19 +46,19 @@ const Nav = () => {
           </button>
           <ul className="menu__links">
             <li className="menu__list">
-              <a href="/" className="menu__link">
+              <Link to="/" className="menu__link">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="menu__list">
-              <a href="/Books" className="menu__link">
+              <Link to="/Books" className="menu__link">
                 Books
-              </a>
+              </Link>
             </li>
             <li className="menu__list">
-              <a href="/Cart" className="menu__link">
+              <Link to="/Cart" className="menu__link">
                 Cart
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
