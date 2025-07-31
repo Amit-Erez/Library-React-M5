@@ -1,6 +1,6 @@
 import React from "react";
 import { books } from "../data";
-import Book from "./ui/book";
+import Book from "./ui/Book";
 
 const Featured = () => {
   // console.log(books.filter((book) => book.rating === 5).slice(0, 4));

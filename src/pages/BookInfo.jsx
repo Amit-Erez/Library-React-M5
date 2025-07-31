@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Rating from "../components/ui/Rating";
 import Price from "../components/ui/Price";
-import Book from "../components/ui/book";
+import Book from "../components/ui/Book";
 
 const BookInfo = ({ books, addToCart, cart }) => {
   const { id } = useParams();
@@ -14,7 +14,7 @@ const BookInfo = ({ books, addToCart, cart }) => {
   }
 
   function bookExistsOnCart() {
-    return cart.find(book => book.id === +id);
+    return cart.find((book) => book.id === +id);
   }
 
   return (
@@ -58,7 +58,7 @@ const BookInfo = ({ books, addToCart, cart }) => {
                     </p>
                   </div>
                   {bookExistsOnCart() ? (
-                    <Link to={'/cart'} className="book__link">
+                    <Link to={"/cart"} className="book__link">
                       <button className="btn">Checkout</button>
                     </Link>
                   ) : (
