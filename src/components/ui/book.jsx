@@ -7,7 +7,7 @@ import Price from "./Price";
 const Book = ({ book }) => {
   const [img, setImg] = useState();
 
-  const mountedRef = useRef(true);
+  // const mountedRef = useRef(true);
 
   useEffect(() => {
     const image = new Image();
@@ -25,7 +25,7 @@ const Book = ({ book }) => {
         <>
           <Link to={`/books/${book.id}`}>
             <figure className="book__img--wrapper">
-              <img src={img} alt="" className="book__img" />
+              <img src={img.src} alt="" className="book__img" />
             </figure>
           </Link>
           <div className="book__title">
